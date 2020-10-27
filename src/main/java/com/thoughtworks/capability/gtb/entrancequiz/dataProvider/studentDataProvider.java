@@ -3,7 +3,9 @@ package com.thoughtworks.capability.gtb.entrancequiz.dataProvider;
 import com.thoughtworks.capability.gtb.entrancequiz.model.Member;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class studentDataProvider {
     public static List<Member> providerMembers(){
@@ -24,6 +26,6 @@ public class studentDataProvider {
                 new Member(14,"大桥"),
                 new Member(15,"蔡文姬")
         );
-        return memberArrayList;
+        return memberArrayList.stream().sorted(Comparator.comparing(Member::getId)).collect(Collectors.toList());
     }
 }

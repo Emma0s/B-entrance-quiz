@@ -29,6 +29,7 @@ public class getUserInfoController {
 
     @GetMapping("/group")
     public List<studentGroup> getGroup(){
+
         return getUserInfoService.getGroupedStudent();
     }
 }

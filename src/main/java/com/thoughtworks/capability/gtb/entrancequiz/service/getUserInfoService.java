@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -31,6 +32,6 @@ public class getUserInfoService {
             groups.get(i%6).addMember(member);
         }
 
-        return groups.stream().collect(Collectors.toList());
+        return groups.stream().peek(group -> group.getMemberList().sort(Comparator.comparing(Member::getId))).sorted(Comparator.comparing(studentGroup::getId)).collect(Collectors.toList());
     }
 }
