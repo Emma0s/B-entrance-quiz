@@ -1,19 +1,19 @@
 package com.thoughtworks.capability.gtb.entrancequiz.model;
 
 public class Member {
-    private String id;
+    private int id;
     private String name;
 
-    public Member(String id, String name) {
+    public Member(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
