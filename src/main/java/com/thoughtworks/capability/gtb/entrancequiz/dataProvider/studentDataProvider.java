@@ -1,3 +1,4 @@
+// TODO GTB-工程实践: - 包名应小写
 package com.thoughtworks.capability.gtb.entrancequiz.dataProvider;
 
 import com.thoughtworks.capability.gtb.entrancequiz.model.Member;
@@ -26,6 +27,7 @@ public class studentDataProvider {
                 new Member(14,"大桥"),
                 new Member(15,"蔡文姬")
         );
+        // TODO GTB-知识点: + 使用了stream
         return memberArrayList.stream().sorted(Comparator.comparing(Member::getId)).collect(Collectors.toList());
     }
 }

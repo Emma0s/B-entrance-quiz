@@ -25,6 +25,7 @@ public class getUserInfoService {
             groups.add(new studentGroup(i,(i+1) + " 组"));
         }
 
+        // TODO GTB-知识点: + 使用了Collections.shuffle()
         Collections.shuffle(groups);
 
         for (int i=0; i<this.getStudents().size(); i++){
